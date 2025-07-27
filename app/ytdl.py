@@ -349,7 +349,7 @@ class DownloadQueue:
                 log.info(f'Playlist item limit is set. Processing only first {playlist_item_limit} entries')
                 entries = entries[:playlist_item_limit]
             for index, etr in enumerate(entries, start=1):
-                etr["_type"] = "video"
+                etr["_type"] = "url"
                 etr["playlist"] = entry["id"]
                 etr["playlist_index"] = '{{0:0{0:d}d}}'.format(playlist_index_digits).format(index)
                 for property in ("id", "title", "uploader", "uploader_id"):
@@ -401,7 +401,7 @@ class DownloadQueue:
             entry = await asyncio.get_running_loop().run_in_executor(None, self.__extract_info, url, playlist_strict_mode)
         except yt_dlp.utils.YoutubeDLError as exc:
             return {'status': 'error', 'msg': str(exc)}
-        return await self.__add_entry(entry, quality, format, folder, custom_name_prefix, playlist_strict_mode, playlist_item_limit, auto_start, already)
+        return await self.__add_entry(entry, quality, format, entry.get("uploader") or folder, custom_name_prefix, playlist_strict_mode, playlist_item_limit, auto_start, already)
 
     async def start_pending(self, ids):
         for id in ids:
