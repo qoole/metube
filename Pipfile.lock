@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "486e1a750e518c9f5ac36c81dea35db4856fd8aea0dae289a9132d4e2519190c"
+            "sha256": "c287336ac18d52aa41651aed6a9c84cbb463c44dea5794dfe7a145109961b5f8"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1245,11 +1245,11 @@
                 "default"
             ],
             "hashes": [
-                "sha256:08d0a25aead160c4787cbd0d2e82a269c75c8dbcfbfa729ce45ad52a8375fa1d",
-                "sha256:12b489eb16828cc3fff1723f244992ebae8a5bf1ad75c8e9f01d729ae237ebb9"
+                "sha256:16767a3172cbb7183199f4db19e34b77b19e030ab7101b8f26d6c9e6af6f42ae",
+                "sha256:81f8e70c0d111b9572420cfea0ba9b4c2ae783fa1a4237fa767eeb777d4c5a58"
             ],
             "markers": "python_version >= '3.10'",
-            "version": "==2026.1.29"
+            "version": "==2026.1.31"
         },
         "yt-dlp-ejs": {
             "hashes": [
